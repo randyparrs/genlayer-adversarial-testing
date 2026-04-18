@@ -28,6 +28,8 @@ The highest risk is prompt injection for any contract that accepts user text. Th
 
 Read ADVERSARIAL_TESTING.md for the full scenarios and code examples. The hardened contract patterns in the document can be copied directly into GenLayer Studio. The findings section provides a prioritized list of what to fix first when securing an Intelligent Contract.
 
+Note: the contract in this repository uses the Address type in the constructor as required by genvm-lint. When deploying in GenLayer Studio use a version that receives str in the constructor and converts internally with Address(owner_address) since Studio requires primitive types to parse the contract schema correctly.
+
 ## Resources
 
 GenLayer Greyboxing Documentation: https://docs.genlayer.com/_temp/security-and-best-practices/grey-boxing
